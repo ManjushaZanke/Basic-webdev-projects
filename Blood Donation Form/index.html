@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="base">
+            <h1>Medical Blood Donation Consent Form</h1>
+            <img class="img" src="img.png">
+            <form>
+                <div class="inputbox">
+                    <label>Name:</label><br>
+                    <input type="text" class="inputdata"   placeholder="First">
+                    <input type="text" class="inputdata"   placeholder="Last"><br><br>
+                    </div>
+    
+                    <div class="inputbox">
+                    <label>Date of Birth:</label><br>
+                    <input type="date"  class="inputdata"  id="dob"  placeholder="MM/DD/YY"><br><br>
+                    </div>
+    
+                    <div class="inputbox">
+                    <label>Phone Number:</label><br>
+                    <input type="number"  class="inputdata" id="number"  placeholder="######"><br><br>
+                    </div>
+    
+                    <div class="inputbox">
+                    <label>Email:</label><br>
+                    <input type="email" class="inputdata" id="mailid"><br><br>
+                    </div>
+    
+                    <div class="inputbox">
+                    <label>Have you previously donated?</label> <br>
+                    <input type="radio" name="like" class="radio">Yes 
+                    <input type="radio" name="like" class="radio">No<br><br>
+                    </div>
+    
+                    <div class="inputbox">
+                    <label>In the last six months have you had any of the following?</label><br>
+                    <input type="checkbox">Tattoing
+                    <input type="checkbox">Piercing
+                    <input type="checkbox">Dental Extraction<br><br>
+                    </div>
+
+                <div class="inputbox"></div>
+                <input type="checkbox" required> I have read and understood all the information presented and answered all the questions truthfully<br><br>
+
+                <input type="button" value="SUBMIT FORM"><br>
+            </form>
+
+        </div>  
+    </div>
+</body>
+</html>

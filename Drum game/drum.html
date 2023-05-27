@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum game</title>
+    <style>
+        body {
+	text-align: center;
+	background-color: #eed9d9;
+  }
+  
+  h1 {
+	font-size: 5rem;
+	color: #1533ca;
+	font-family: cursive;
+	text-shadow: 3px 0 #f21010;
+  
+  }
+  
+  .a {
+	background-image: url("img/hightom.jpeg");
+  }
+  
+  .b {
+	background-image: url("img/midtom.jpeg");
+  }
+  
+  .c {
+	background-image: url("img/lowtom.jpeg");
+  }
+  
+  .d {
+	background-image: url("img/bass.jpeg");
+  }
+  
+  .e {
+	background-image: url("img/snare.jpg");
+  }
+  
+  .f {
+	background-image: url("img/crash.jpeg");
+  }
+  
+  .g {
+	background-image: url("img/kick.jpeg");
+  }
+  
+  .set {
+	margin: 10% auto;
+  }
+  
+  .pressed {
+	box-shadow: 0 3px 4px 0 #DBEDF3;
+	opacity: 0.5;
+  }
+  
+  .drum{
+	outline: none;
+	border: 5px solid blue;
+	font-size: medium;
+	font-family: 'Arvo', cursive;
+	line-height: 2;
+	font-weight: 800;
+	color: black;
+	border-radius: 15px;
+	display: inline-block;
+	width: 170px;
+	height: 200px;
+	text-align: center;
+	margin: 10px;
+	background-color: white;
+  }
+  
+    </style>
+</head>
+<body>
+    <h1>The Drum Kit</h1>
+  <div class="all">
+    <button class="a drum">High Tom</button>
+    <button class="b drum">Mid Tom</button>
+    <button class="c drum">Low Tom</button>
+    <button class="d drum">Bass Drum</button>
+    <button class="e drum">Snare</button>
+    <button class="f drum">Crash</button>
+    <button class="g drum">Kick-bass</button>
+  </div>
+  
+  <script>
+    var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+
+for (var i = 0; i < numberOfDrumButtons; i++) {
+
+  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+
+    var buttonInnerHTML = this.innerHTML;
+
+    makeSound(buttonInnerHTML);
+
+    buttonAnimation(buttonInnerHTML);
+
+  });
+
+}
+
+document.addEventListener("keypress", function(event) {
+
+  makeSound(event.key);
+
+  buttonAnimation(event.key);
+
+});
+
+
+function makeSound(key) {
+
+  switch (key) {
+    case "High Tom":
+      var tom1 = new Audio("audio/hightom.mp3");
+      tom1.play();
+      break;
+
+    case "Mid Tom":
+      var tom2 = new Audio("audio/midtom.mp3");
+      tom2.play();
+      break;
+
+    case "Low Tom":
+      var tom3 = new Audio('audio/lowtom.mp3');
+      tom3.play();
+      break;
+
+    case "Bass Drum":
+      var tom4 = new Audio('audio/bassdrum.mp3');
+      tom4.play();
+      break;
+
+    case "Snare":
+      var snare = new Audio('audio/snare.mp3');
+      snare.play();
+      break;
+
+    case "Crash":
+      var crash = new Audio('audio/crash.mp3');
+      crash.play();
+      break;
+
+    case "Kick-bass":
+      var kick = new Audio('audio/kick.mp3');
+      kick.play();
+      break;
+
+    default: console.log(key);
+
+  }
+}
+
+
+function buttonAnimation(currentKey) {
+
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100);
+
+}
+
+  </script> 
+</body>
+</html>

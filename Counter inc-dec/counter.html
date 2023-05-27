@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        font-family: sans-serif;
+        background-color: #ffffff;
+        font-size: 25px;
+        line-height: 1.5;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container{
+        width:700px;
+        height: auto;
+        margin: 100px auto;
+        background-color: #eee;
+        border-radius: 5px;
+    }
+    .base{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    float: none;
+  }
+        h1{
+            color: rgb(7, 20, 93);
+            margin-left:9ch;
+            
+        }
+        #counter{
+            color: rgb(16, 149, 21);
+            margin-left: 6ch;
+            font-size: 100px;
+        }
+        .btn{
+            margin-left: 15ch;
+            margin-bottom: 5ch;
+        }
+        #btn{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="base">
+        <h1>Counter</h1>
+        <p id="counter">0</p>
+        <div class="btn">
+            <button id="btn" onclick="increase()">Increase</button>
+            <button id="btn" onclick="decrease()">Decrease</button>
+            <button id="btn" onclick="reset()">Reset</button>
+        </div>
+        </div>
+    </div>
+    <script>
+        var counterValue = 0;
+        var counterElement = document.getElementById("counter");
+
+        function increase() {
+            counterValue++;
+            counterElement.innerText = counterValue;
+        }
+
+        function decrease() {
+            counterValue--;
+            counterElement.innerText = counterValue;
+        }
+
+        function reset() {
+            counterValue = 0;
+            counterElement.innerText = counterValue;
+        }
+    </script>
+</body>
+</html>
