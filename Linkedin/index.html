@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | LinkedIn</title>
+    <link rel="icon" href="https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html">
+                <img src="img/logo.png" class="logo">
+            </a>
+            <div class="search-box">
+                <img src="./img/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="" class="active-link"><img src="img/home.png"><span>Home</span></a></li>
+                <li><a href=""><img src="img/network.png"><span>My Network</span></a></li>
+                <li><a href=""><img src="img/jobs.png"><span>Jobs</span></a></li>
+                <li><a href=""><img src="img/message.png"><span>Messaging</span></a></li>
+                <li><a href=""><img src="img/notification.png"><span>Notification</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="img/profilephoto.png"
+                    class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img
+                        src="img/profilephoto.png">
+                    <div>
+                        <h3>AzaanUllah Khan</h3>
+                        <a href="">See Your Proflie</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="" class="profile-menu-link">
+                    <img src="img/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="img/setting.png">
+                    <p>Settings and Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="img/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="img/display.png">
+                    <p>Display & Accesebility</p>
+                    <span>></span>
+                </a>
+                <a href="https://www.linkedin.com/in/azaanullah-khan-2859bb268/" class="profile-menu-link" target="_blank">
+                    <img src="img/logout.png">
+                    <p>Log Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ended -->
+    
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="img/coverphoto.jpeg"
+                    width="100%" class="cover-img">
+                <div class="sidebar-profile-info">
+                    <img
+                        src="img/profilephoto.png">
+                    <h1>Manjusha Zanke</h1>
+                    <h3>Web Developer</h3>
+                    <ul>
+                        <li>Your Profile Views<span>100</span></li>
+                        <li>Your Post Views<span>370</span></li>
+                        <li>Your Connections<span>746</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href=""><img src="img/items.png">My Items</a>
+                    <a href=""><img src="img/premium.png">Try Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-activity" id="sidebarActivity">
+                <h3>RECENT</h3>
+                <a href=""><img src="img/recent.png">Web Development</a>
+                <a href=""><img src="img/recent.png">User Interface</a>
+                <a href=""><img src="img/recent.png">Online Learning</a>
+                <a href=""><img src="img/recent.png">Learn Online</a>
+                <a href=""><img src="img/recent.png">Code Better</a>
+                <a href=""><img src="img/recent.png">Group Learning</a>
+                <h3>GROUPS</h3>
+                <a href=""><img src="img/group.png">Saylani Mass It Tranining</a>
+                <a href=""><img src="img/group.png">The Perfect Dev</a>
+                <a href=""><img src="img/group.png">Techno Kids</a>
+                <a href=""><img src="img/group.png">Web and App Development</a>
+                <h3>HASHTAGS</h3>
+                <a href=""><img src="img/hashtag.png">webdevelopment</a>
+                <a href=""><img src="img/hashtag.png">letsconnect!</a>
+                <a href=""><img src="img/hashtag.png">pakistanzindabad</a>
+                <div class="discover-more-link">
+                    <a href="">Discover More</a>
+                </div>
+            </div>
+            <p id="showMoreLink" onclick="showSideBar()">Show More <b>+</b></p>
+        </div>
+        <div class="main-content" id="main">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img
+                        src="img/profilephoto.png">
+                    <textarea placeholder="Start a Post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="img/photo.png">Photo</li>
+                    <li><img src="img/video.png">Video</li>
+                    <li><img src="img/event.png">Event</li>
+                    <li onclick="popup()">Post</li>
+                </div>
+            </div>
+            <div class="sort-by">
+                <hr>
+                <p>Sort By: <span>Top <img src="img/down-arrow.png" alt=""></span></p>
+            </div>
+            <!-- allposts -->
+            
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="img/profilephoto.png">
+                    <div>
+                        <h1>Manjusha Zanke &middot; <span style="font-weight: lighter;">You</span></h1>
+                        <small>Web developer</small>
+                        <small>2 days ago</small>
+                    </div>
+                </div>
+                <p>Quiz Board Made using HTML CSS and JS</p>
+                <video
+                    poster="https://media.licdn.com/dms/image/D4D05AQGujfNmeHKdww/videocover-high/0/1684965468004?e=1685883600&amp;v=beta&amp;t=AcimwqG_x6wwbpK3-4u7HP3UtoeMDvWSfEv_4now6dw"
+                    src="https://dms.licdn.com/playlist/vid/D4D05AQGujfNmeHKdww/mp4-720p-30fp-crf28/0/1684965490953?e=1685883600&amp;v=beta&amp;t=oAo4Jc_HWXK1NWozHCE9nBF3IgYOi70jc7UGxmaIPGs"
+                    autoplay="autoplay" width="100%" controls></video>
+                <div class="post-stats">
+                    <div>
+                        <img src="img/thumbsup.png">
+                        <img src="img/love.png">
+                        <img src="img/clap.png">
+                        <span class="liked-users">Vishal Ingle and 12 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 10 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="img/profilephoto.png"
+                            class="post-activity-user-icon">
+                        <img src="img/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="img/like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="img/comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="img/share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="img/send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+  
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="img/more.png" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="">High demand for skilled manpower</a>
+                <span>1d ago &middot; 1934 readers</span>
+                <a href="">Carrier growing horizontally too</a>
+                <span>10d ago &middot; 1084 readers</span>
+                <a href="">Less work visa for US, more for UK</a>
+                <span>7h ago &middot; 7980 readers</span>
+                <a href="">More hiring = Higher confidence ?</a>
+                <span>1h ago &middot; 1924 readers</span>
+                <a href="">MIT has announced batch 4 of Techno Kids</a>
+                <span>8h ago &middot; 1906 readers</span>
+                <a href="" class="read-more-link">Read More</a>
+            </div>
+            <div class="sidebar-ad">
+                <small>AD &middot; &middot; &middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="img/profilephoto.png"
+                        alt="">
+                    <img src="img/MITAOE.png" alt="">
+                </div>
+                <b>Share Your Experience With Linkedin</b>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7068264850904293377/" class="ad-link" target="_blank">Learn More</a>
+            </div>
+            <div class="sidebar-useful-links">
+                <a href="">About</a>
+                <a href="">Accesibility</a>
+                <a href="">Help Center</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Advertising</a>
+                <a href="">Get the App</a>
+                <a href="">More</a>
+                <div class="copyright-msg">
+                    <img src="img/logo.png">
+                    <p>Manjusha &copy; All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
